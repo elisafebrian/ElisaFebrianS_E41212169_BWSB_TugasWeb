@@ -1,5 +1,6 @@
+ {{-- extends disini menandakan bahwa bagian disini merupakan  bagian  dari layout.template --}}
  @extends('frontend/layouts.template')
-
+{{-- isi dari conten  --}}
  @section('content')
  <!-- ======= Hero Section ======= -->
  <section id="hero" class="d-flex align-items-center">
