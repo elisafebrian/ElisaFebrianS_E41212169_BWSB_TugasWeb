@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManagementUserController;
+use App\Http\Controllers\Frontend\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,9 +63,9 @@ Route::get('user/1/destroy', [ManagementUserController::class, 'destroy']);
    Route::get('/home', function(){
     return view('home');
  });
-
-
-
-
 //Route::resource('user','ManagementUserController');
     
+
+//Tugas Minggu ke4 (1)
+Route::get('LandingPage', [HomeController::class, 'index'])->name('home');
+
