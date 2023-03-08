@@ -36,10 +36,10 @@
 </head>
 
 <body>
-
+<!--include untuk memasukkan file navbar pada satu halaman template -->
 @include('frontend/layouts.navbar')
-
-@yield('content')
+<!--yeald digunakan untuk menampilkan isi bagian tersebut -->
+@yield('content') 
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
