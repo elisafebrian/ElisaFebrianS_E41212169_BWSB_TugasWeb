@@ -31,6 +31,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="/home">Login</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->

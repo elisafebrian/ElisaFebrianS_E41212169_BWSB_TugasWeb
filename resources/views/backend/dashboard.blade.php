@@ -1,5 +1,6 @@
 {{-- extends disini menandakan bahwa bagian dashboard disini merupakan dari bagian layout.template --}}
 @extends('backend/layouts.template')
+@extends('../layout.app')
 {{-- isi  konten dari dashboard --}}
 @section('content')
 
@@ -644,6 +645,7 @@
             </div>
           </div><!-- End News & Updates -->
 
+    
         </div><!-- End Right side columns -->
 
       </div>

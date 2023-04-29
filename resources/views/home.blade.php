@@ -1,4 +1,4 @@
-<!-- Membuat View Sederhana yaitu dengan menampilkan tampilan dibawah apabila route telah memanggil file home dalam view
+ {{-- Membuat View Sederhana yaitu dengan menampilkan tampilan dibawah apabila route telah memanggil file home dalam view --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale())}}">
 <head>
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 </body>
-</html> -->
+</html> 
 
 <!-- membuat view blade tampilan content disini akan tampil apabila app.blade pada layout menampilkan -->
 <!-- 
@@ -33,7 +33,7 @@
 
 <!-- Membuat View dengan parameter  -->
 
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 
 @section('content')
@@ -50,4 +50,4 @@
 		<li>{{ $p }} </i>
 		@endforeach
 </div>
-@endsection
+@endsection --}}

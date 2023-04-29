@@ -9,15 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    //membuat tabel detail_profile
     public function up(): void
     {
-        Schema::create('detail_profile', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('address');
-            $table->string('nomor_tlp');
-            $table->date('ttl');
-            $table->string('foto');
+        Schema::create('pekerjaans', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('jabatan');
+            $table->string('tahun_masuk');
+            $table->string('tahun_keluar');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('detail_profile');
+        Schema::dropIfExists('pekerjaans');
     }
 };
