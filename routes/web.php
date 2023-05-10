@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManagementUserController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\backend\DashboardController;
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\pekerjaan1Controller;
 use App\Http\Controllers\PekerjaanController;
 use App\Models\Pekerjaan;
@@ -93,3 +94,21 @@ Route::get('/tampildata{id}', [App\Http\Controllers\PekerjaanController::class, 
 Route::post('/updatedata{id}', [App\Http\Controllers\PekerjaanController::class, 'updatedata'])->name('updatedata');
 
 Route::post('/add',[PekerjaanController::class, 'add']);
+
+Route::get('/session/create',[App\Http\Controllers\SessionController::class, 'create']);
+
+Route::get('/session/show',[App\Http\Controllers\SessionController::class, 'show']);
+
+Route::get('/session/delete',[App\Http\Controllers\SessionController::class, 'delete']);
+
+//route dengan parameter pegawai dan kedua parameter yang digunakan untuk menangkap syntak nama
+Route::get('/pegawai/{nama}', [App\Http\Controllers\PegawaiController::class, 'index']);
+
+//get untuk menampilkan sourcecode pada formulir
+Route::get('/formulir', [App\Http\Controllers\PegawaiController::class, 'formulir']);
+
+//post digunakan untuk mengirim data yang akan disubmit
+Route::post('/formulir/proses', [App\Http\Controllers\PegawaiController::class, 'proses']);
+
+Route::get('/cobaerror', [App\Http\Controllers\CobaController::class, 'cobaerorr']);
+Route::get('/cobaerror/{nama?}', [App\Http\Controllers\CobaController::class, 'index']);
