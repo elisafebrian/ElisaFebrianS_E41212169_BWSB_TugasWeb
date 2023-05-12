@@ -7,6 +7,7 @@ use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\pekerjaan1Controller;
 use App\Http\Controllers\PekerjaanController;
+use App\Http\Controllers\UploadController;
 use App\Models\Pekerjaan;
 use Illuminate\Support\Facades\Auth;
 
@@ -112,3 +113,6 @@ Route::post('/formulir/proses', [App\Http\Controllers\PegawaiController::class, 
 
 Route::get('/cobaerror', [App\Http\Controllers\CobaController::class, 'cobaerorr']);
 Route::get('/cobaerror/{nama?}', [App\Http\Controllers\CobaController::class, 'index']);
+
+Route::get('/upload', [App\Http\Controllers\UploadController::class, 'upload'])->name('upload');
+Route::post('/upload/proses', [App\Http\Controllers\UploadController::class, 'proses_upload'])->name('upload.proses');
