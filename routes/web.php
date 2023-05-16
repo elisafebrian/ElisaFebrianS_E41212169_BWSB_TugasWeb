@@ -115,4 +115,13 @@ Route::get('/cobaerror', [App\Http\Controllers\CobaController::class, 'cobaerorr
 Route::get('/cobaerror/{nama?}', [App\Http\Controllers\CobaController::class, 'index']);
 
 Route::get('/upload', [App\Http\Controllers\UploadController::class, 'upload'])->name('upload');
+
 Route::post('/upload/proses', [App\Http\Controllers\UploadController::class, 'proses_upload'])->name('upload.proses');
+
+Route::post('/upload/resize', [App\Http\Controllers\UploadController::class, 'resize_upload'])->name('upload.resize');
+
+Route::get('/dropzone', [App\Http\Controllers\UploadController::class, 'dropzone'])->name('dropzone');
+Route::post('/dropzone/store', [App\Http\Controllers\UploadController::class, 'dropzone_store'])->name('dropzone.store');
+
+Route::get('/pdf_upload', [App\Http\Controllers\UploadController::class, 'pdf_upload'])->name('pdf.upload');
+Route::post('/pdf/store', [App\Http\Controllers\UploadController::class, 'pdf_store'])->name('pdf.store');

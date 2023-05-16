@@ -212,6 +212,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         'Image' => Intervention\Image\Facades\Image::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        Intervention\Image\ImageServiceProvider::class,
     ])->toArray(),
 
 ];
