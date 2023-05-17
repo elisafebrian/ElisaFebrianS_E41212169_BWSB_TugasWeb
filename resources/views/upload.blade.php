@@ -27,6 +27,7 @@
             <div class="form-group">
                 <b>File Gambar</b><br/>
                 <input type="file" name="file">
+       {{-- untuk menjalankan fungsi pengiriman data           --}}
 
             <div class="form-group">
                 <b>Keterangan</b>

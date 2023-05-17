@@ -83,23 +83,25 @@ Route::get('LandingPage', [HomeController::class, 'index'])->name('home');
 // route dengan beralamatkan dashboard  dengan mengambil class index yang berada pada folder controller
 // Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Auth::routes();
-
+//route dengan alamat home yang memanggil controller bernama homecontroller untuk memanggil class index 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+//memanggil clas data pada pekerjaancontroller
 Route::get('/data', [App\Http\Controllers\PekerjaanController::class, 'data'])->name('data');
-
+//memanggil class data1 pada controller pekerjaancontroller 
 Route::get('/data1',[App\Http\Controllers\PekerjaanController::class, 'data1'])->name('data1');
-
+//route yang digunakan untuk melakukan delete dengan menangkap syntax id yang telah dibuat pada pekerjaancontroller di dlass delete
 Route::get('/delete{id}', [App\Http\Controllers\PekerjaanController::class, 'delete'])->name('delete');
+//route yang menangkap syntax id pada class tampildata
 Route::get('/tampildata{id}', [App\Http\Controllers\PekerjaanController::class, 'tampildata'])->name('tampildata');
+//route yang digunakan untuk mengirim data berdasarkan syntax id yg telah ditaur dalam class function update pada pekerjaan controller
 Route::post('/updatedata{id}', [App\Http\Controllers\PekerjaanController::class, 'updatedata'])->name('updatedata');
-
+//route untuk mengirim data 
 Route::post('/add',[PekerjaanController::class, 'add']);
-
+//memanggil session create untuk menjalankan create pda class create sehingga menampilkan session yang dipanggil
 Route::get('/session/create',[App\Http\Controllers\SessionController::class, 'create']);
-
+//memanggil show pada class show
 Route::get('/session/show',[App\Http\Controllers\SessionController::class, 'show']);
-
+//memanggil class delet untuk memanggil class delete 
 Route::get('/session/delete',[App\Http\Controllers\SessionController::class, 'delete']);
 
 //route dengan parameter pegawai dan kedua parameter yang digunakan untuk menangkap syntak nama
@@ -110,18 +112,20 @@ Route::get('/formulir', [App\Http\Controllers\PegawaiController::class, 'formuli
 
 //post digunakan untuk mengirim data yang akan disubmit
 Route::post('/formulir/proses', [App\Http\Controllers\PegawaiController::class, 'proses']);
-
+//
 Route::get('/cobaerror', [App\Http\Controllers\CobaController::class, 'cobaerorr']);
 Route::get('/cobaerror/{nama?}', [App\Http\Controllers\CobaController::class, 'index']);
-
+//route ini digunakan untuk menampilkan upload
 Route::get('/upload', [App\Http\Controllers\UploadController::class, 'upload'])->name('upload');
-
+//route untuk mengirim data
 Route::post('/upload/proses', [App\Http\Controllers\UploadController::class, 'proses_upload'])->name('upload.proses');
-
+//route untuk mengirim data
 Route::post('/upload/resize', [App\Http\Controllers\UploadController::class, 'resize_upload'])->name('upload.resize');
-
+//route untuk menampilkan dropzone
 Route::get('/dropzone', [App\Http\Controllers\UploadController::class, 'dropzone'])->name('dropzone');
+//route unruk mengirim data pada dropzone
 Route::post('/dropzone/store', [App\Http\Controllers\UploadController::class, 'dropzone_store'])->name('dropzone.store');
-
+//route untuk menampilkan 
 Route::get('/pdf_upload', [App\Http\Controllers\UploadController::class, 'pdf_upload'])->name('pdf.upload');
+//route untuk mengirim data
 Route::post('/pdf/store', [App\Http\Controllers\UploadController::class, 'pdf_store'])->name('pdf.store');

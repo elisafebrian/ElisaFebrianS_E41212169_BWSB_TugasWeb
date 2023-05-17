@@ -25,10 +25,9 @@
             </div>
         </div>
     </div>
-     
-<script type="text/javascript">
+    <script type="text/javascript">
         Dropzone.autoDiscover = false;
-        var myDropzone = new Dropzone('#pdf-upload', {
+        var myDropzone = new Dropzone('#pdf-upload', 
             maxFilesize: 1,
             acceptedFiles: ".pdf",
             addRemoveLinks: true,
@@ -45,14 +44,11 @@
                     var data = $('#pdf-uploud').serializeArray();
                     $.each(data, function(key, eL) {
                         formData.append(el.name, el.value);
+                        
                     });
                 
-                }
-                
-                );
+                });
             
-            
-            
-        </script>
+         </script>
 </body>
 </html>

@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 
 class SessionController extends Controller
 {
+    //membuat class session dengan menampilkan masukan yang telah disediakan
     public function create(Request $request) {
         $request->session()->put('nama','Politeknik Negeri Jember');
         echo "Data telah ditambahkan ke session.";
     }
+    //membuat class session yang mengabil nama dan apabila tidak ada makan akan diarahkan pada else
     public function show(Request $request) {
         if($request->session()->has('nama')) {
             echo $request->session()->get('nama');
@@ -17,6 +19,7 @@ class SessionController extends Controller
             echo 'Tidak ada data dalam session. ';
         }
     }
+    //mmebuat session delate
     public function delete(Request $request) {
         $request->session()->forget('nama');
         echo "Data telah dihapus dari session.";

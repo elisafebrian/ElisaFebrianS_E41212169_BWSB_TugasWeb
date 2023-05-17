@@ -9,16 +9,19 @@ use Illuminate\Support\Facades\Response;
 class ApiPekerjaanController extends Controller
 {
     public function getAll()
+    //membuat class untuk menangkap semua data yg brada pada pekerjaan
     {
         $pekerjaan = Pekerjaan::all();
         return Response::json($pekerjaan, 201);
     }
     public function getPen($id)
+    //class yang menangkap berdasarkan id
     {
         $pekerjaan = Pekerjaan::find($id);
         return Response::json($pekerjaan, 200);
     }
     public function createPen(Request $request)
+    //class menangkap create session
     {
         Pekerjaan::create($request->all());
 
@@ -28,6 +31,7 @@ class ApiPekerjaanController extends Controller
         ], 201);
     }
     public function updatePen($id, Request $request)
+    //class untuk update yang melakukan request berdasarkan id pada field
     {
         Pekerjaan::find($id)->update($request->all());
 
@@ -37,6 +41,7 @@ class ApiPekerjaanController extends Controller
         ], 201);
     }
     public function deletePen($id)
+    //class function delete
     {
         Pekerjaan::destroy($id);
 

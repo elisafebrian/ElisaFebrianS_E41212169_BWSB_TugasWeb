@@ -11,9 +11,11 @@ use Image;
 
 class UploadController extends Controller
 {
+    //membuat function menampilkan tampilan upload
     public function upload(){
         return view('upload');
     }
+    //membuat class untuk memanggil data hasil yang diinputkan sehingga dapat ditampilan 
     public function proses_upload(Request $request){
         $this->validate($request, [
             'file' => 'required',

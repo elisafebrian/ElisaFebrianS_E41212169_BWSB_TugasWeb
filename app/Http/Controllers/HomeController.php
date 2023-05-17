@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //untuk menampilkan dashboard
         return view('backend/dashboard');
     }
 }

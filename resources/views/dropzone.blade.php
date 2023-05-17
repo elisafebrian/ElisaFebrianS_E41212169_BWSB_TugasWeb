@@ -13,10 +13,12 @@
     </script>
 </head>
 <body>
+{{-- membuat tampilan dropzene menggunakan bawaan bootstrap --}}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center">Dropzone Image Upload in Laravel</h1><br>
+                {{-- action yang mengarah pada dropzone.store dan melakukan pengiriman data yng telah diinputkan--}}
                 <form action="{{ route('dropzone.store')}}" method="post" name="file" files="true"
                 enctype="multipart/form-data" class="dropzone" id="image-upload">
                 @csrf

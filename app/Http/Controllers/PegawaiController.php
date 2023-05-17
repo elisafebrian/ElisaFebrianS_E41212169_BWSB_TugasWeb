@@ -13,9 +13,12 @@ class PegawaiController extends Controller
     public function index(Request $request){
         return $request->segment(2);
     }
+    //class untuk menampilkan formulir
     public function formulir(){
         return view('backend/layouts/formulir');
     }
+
+    //membuat function request untuk memanggil data yang telah diinputkan, dengan memanggil methodnta
     public function proses(Request $request){
 
         $message =[
